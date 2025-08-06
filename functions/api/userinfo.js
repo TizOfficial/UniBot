@@ -46,9 +46,9 @@ export async function onRequest(context) {
     return new Response(JSON.stringify({
       id: user.id,
       username: user.username,
+      nickname: user.nick,
       discriminator: user.discriminator,
       global_name: user.global_name || null,
-      mention: `<@${user.id}>`,
       avatar: avatarURL,
       banner: bannerURL,
       banner_color: user.banner_color || null,
