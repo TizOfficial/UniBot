@@ -12,28 +12,6 @@ export async function onRequest(context) {
 
   const token = process.env.DISCORD_BOT_TOKEN;
 
-  const FLAGS = {
-    1 << 0: "Discord Employee",
-    1 << 1: "Partnered Server Owner",
-    1 << 2: "HypeSquad Events",
-    1 << 3: "Bug Hunter Level 1",
-    1 << 6: "HypeSquad Bravery",
-    1 << 7: "HypeSquad Brilliance",
-    1 << 8: "HypeSquad Balance",
-    1 << 9: "Early Supporter",
-    1 << 14: "Bug Hunter Level 2",
-    1 << 17: "Verified Bot",
-    1 << 18: "Early Verified Bot Developer",
-    1 << 22: "Active Developer"
-  };
-
-  const premiumTypes = {
-    0: "Kein Nitro",
-    1: "Nitro Classic",
-    2: "Nitro",
-    3: "Nitro Basic"
-  };
-
   try {
     // Global User Daten
     const userRes = await fetch(`https://discord.com/api/v10/users/${userId}`, {
